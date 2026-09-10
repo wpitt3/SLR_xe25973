@@ -1,0 +1,7 @@
+/data/
+.DS_Store
+**/.DS_Store
+/MSKA/
+/pems/
+**/*.pth
+pts.tar.gz
