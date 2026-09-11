@@ -1,0 +1,760 @@
+/opt/pytorch/lib/python3.13/site-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1788384351.704698    3618 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/opt/pytorch/lib/python3.13/site-packages/torch/nn/modules/loss.py:44: UserWarning: size_average and reduce args will be deprecated, please use reduction='mean' instead.
+  self.reduction: str = _Reduction.legacy_get_string(size_average, reduce)
+environ({'SHELL': '/bin/bash', 'TERM_PROGRAM_VERSION': '3.4', 'DLAMI_SAVED_LD_LIBRARY_PATH': '/opt/amazon/openmpi/lib:/usr/local/lib:/usr/lib:/opt/amazon/openmpi/lib:/usr/local/lib:/usr/lib', 'TMUX': '/tmp/tmux-1000/default,2191,0', 'PWD': '/home/ubuntu/MSKA', 'LOGNAME': 'ubuntu', 'XDG_SESSION_TYPE': 'tty', 'MODULESHOME': '/usr/share/modules', 'HOME': '/home/ubuntu', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VIRTUAL_ENV': '/opt/pytorch', 'SSH_CONNECTION': '90.199.191.87 55859 172.31.49.158 22', 'PYTORCH_CUDA_ALLOC_CONF': 'expandable_segments:True', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'XDG_SESSION_CLASS': 'user', 'TERM': 'tmux-256color', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ubuntu', 'TMUX_PANE': '%0', 'LOADEDMODULES': '', 'SHLVL': '2', 'DLAMI_SAVED_PATH': '/opt/pytorch/bin:/opt/amazon/openmpi/bin:/opt/amazon/efa/bin:/opt/amazon/openmpi/bin:/opt/amazon/efa/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_SESSION_ID': '1', 'VIRTUAL_ENV_PROMPT': 'pytorch', 'LD_LIBRARY_PATH': '/opt/pytorch/lib/python3.13/site-packages/cv2/../../lib64:/opt/pytorch/cuda/lib:/opt/pytorch/lib:/opt/amazon/openmpi/lib:/usr/local/lib:/usr/lib:/opt/amazon/openmpi/lib:/usr/local/lib:/usr/lib', 'XDG_RUNTIME_DIR': '/run/user/1000', 'PS1': '(pytorch) ${debian_chroot:+($debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$ ', 'SSH_CLIENT': '90.199.191.87 55859 22', '__MODULES_LMINIT': 'module use --append /etc/environment-modules/modules:module use --append /usr/share/modules/versions:module use --append /usr/share/modules/$MODULE_VERSION/modulefiles:module use --append /usr/share/modules/modulefiles', 'CUDA_HOME': '/opt/pytorch/cuda', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PATH': '/opt/pytorch/bin:/opt/amazon/openmpi/bin:/opt/amazon/efa/bin:/opt/amazon/openmpi/bin:/opt/amazon/efa/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/pytorch/cuda/bin:/opt/pytorch/cuda/include', 'MODULEPATH': '/opt/amazon/modules/modulefiles:/opt/amazon/modules/modulefiles:/etc/environment-modules/modules:/usr/share/modules/versions:/usr/share/modules/$MODULE_VERSION/modulefiles:/usr/share/modules/modulefiles', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'SSH_TTY': '/dev/pts/1', 'OLDPWD': '/home/ubuntu', 'MODULES_CMD': '/usr/lib/x86_64-linux-gnu/modulecmd.tcl', 'TERM_PROGRAM': 'tmux', 'BASH_FUNC_ml%%': '() {  module ml "$@"\n}', 'BASH_FUNC_module%%': '() {  local _mlredir=1;\n if [ -n "${MODULES_REDIRECT_OUTPUT+x}" ]; then\n if [ "$MODULES_REDIRECT_OUTPUT" = \'0\' ]; then\n _mlredir=0;\n else\n if [ "$MODULES_REDIRECT_OUTPUT" = \'1\' ]; then\n _mlredir=1;\n fi;\n fi;\n fi;\n case " $@ " in \n *\' --no-redirect \'*)\n _mlredir=0\n ;;\n *\' --redirect \'*)\n _mlredir=1\n ;;\n esac;\n if [ $_mlredir -eq 0 ]; then\n _module_raw "$@";\n else\n _module_raw "$@" 2>&1;\n fi\n}', 'BASH_FUNC__module_raw%%': '() {  eval "$(/usr/bin/tclsh8.6 \'/usr/lib/x86_64-linux-gnu/modulecmd.tcl\' bash "$@")";\n _mlstatus=$?;\n return $_mlstatus\n}', '_': '/opt/pytorch/bin/python', 'ENABLE_RUNTIME_UPTIME_TELEMETRY': '1', 'TF2_BEHAVIOR': '1', 'TPU_ML_PLATFORM': 'Tensorflow', 'TPU_ML_PLATFORM_VERSION': '2.21.0', 'HDF5_PLUGIN_PATH': 'disable', 'KMP_DUPLICATE_LIB_OK': 'True', 'KMP_INIT_AT_FORK': 'FALSE', 'TORCHINDUCTOR_CACHE_DIR': '/tmp/torchinductor_ubuntu', 'TOKENIZERS_PARALLELISM': 'false', 'WANDB_MODE': 'disabled'})
+Not using distributed mode
+Namespace(batch_size=8, epochs=100, world_size=2, dist_url='env://', local_rank=0, finetune='', device='cuda', seed=0, resume='checkpoints/jitter/best_checkpoint.pth', start_epoch=0, eval=True, eval_test_only=True, num_workers=4, pin_mem=True, config='data/corrupt/_cfg_jitter__rotate_25.yaml', ft_recipe='normal', enc_lr=0.0001, log_all=False, entity=None, project='VLP', run=<wandb.sdk.lib.noop_run.NoopRun object at 0x7c06c7f84590>, distributed=False)
+Creating dataset:
+#total train set: 18400.
+#total val set: 1077.
+#total test set: 1176.
+Creating model:
+SignLanguageModel(
+  (recognition_network): Recognition(
+    (visual_backbone_keypoint): DSTA(
+      (left_input_map): Sequential(
+        (0): Conv2d(3, 64, kernel_size=(1, 1), stride=(1, 1))
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+        (2): LeakyReLU(negative_slope=0.1)
+      )
+      (right_input_map): Sequential(
+        (0): Conv2d(3, 64, kernel_size=(1, 1), stride=(1, 1))
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+        (2): LeakyReLU(negative_slope=0.1)
+      )
+      (body_input_map): Sequential(
+        (0): Conv2d(3, 64, kernel_size=(1, 1), stride=(1, 1))
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+        (2): LeakyReLU(negative_slope=0.1)
+      )
+      (face_input_map): Sequential(
+        (0): Conv2d(3, 64, kernel_size=(1, 1), stride=(1, 1))
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+        (2): LeakyReLU(negative_slope=0.1)
+      )
+      (face_graph_layers): ModuleList(
+        (0): STAttentionBlock(
+          (pes): PositionalEncoding()
+          (ff_nets): Sequential(
+            (0): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (in_nets): Conv2d(64, 192, kernel_size=(1, 1), stride=(1, 1))
+          (out_nets): Sequential(
+            (0): Conv2d(384, 64, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (out_nett): Sequential(
+            (0): Conv2d(64, 64, kernel_size=(7, 1), stride=(2, 1), padding=(3, 0))
+            (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (downs1): Sequential(
+            (0): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (downs2): Sequential(
+            (0): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (downt2): Sequential(
+            (0): Conv2d(64, 64, kernel_size=(1, 1), stride=(2, 1))
+            (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (tan): Tanh()
+          (relu): LeakyReLU(negative_slope=0.1)
+          (drop): Dropout(p=0.1, inplace=False)
+        )
+        (1): STAttentionBlock(
+          (pes): PositionalEncoding()
+          (ff_nets): Sequential(
+            (0): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (in_nets): Conv2d(64, 192, kernel_size=(1, 1), stride=(1, 1))
+          (out_nets): Sequential(
+            (0): Conv2d(384, 64, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (out_nett): Sequential(
+            (0): Conv2d(64, 64, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+            (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (tan): Tanh()
+          (relu): LeakyReLU(negative_slope=0.1)
+          (drop): Dropout(p=0.1, inplace=False)
+        )
+        (2): STAttentionBlock(
+          (pes): PositionalEncoding()
+          (ff_nets): Sequential(
+            (0): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (in_nets): Conv2d(64, 384, kernel_size=(1, 1), stride=(1, 1))
+          (out_nets): Sequential(
+            (0): Conv2d(384, 128, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (out_nett): Sequential(
+            (0): Conv2d(128, 128, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+            (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (downs1): Sequential(
+            (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (downs2): Sequential(
+            (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (downt2): Sequential(
+            (0): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (tan): Tanh()
+          (relu): LeakyReLU(negative_slope=0.1)
+          (drop): Dropout(p=0.1, inplace=False)
+        )
+        (3): STAttentionBlock(
+          (pes): PositionalEncoding()
+          (ff_nets): Sequential(
+            (0): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (in_nets): Conv2d(128, 384, kernel_size=(1, 1), stride=(1, 1))
+          (out_nets): Sequential(
+            (0): Conv2d(768, 128, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (out_nett): Sequential(
+            (0): Conv2d(128, 128, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+            (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (tan): Tanh()
+          (relu): LeakyReLU(negative_slope=0.1)
+          (drop): Dropout(p=0.1, inplace=False)
+        )
+        (4): STAttentionBlock(
+          (pes): PositionalEncoding()
+          (ff_nets): Sequential(
+            (0): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (in_nets): Conv2d(128, 768, kernel_size=(1, 1), stride=(1, 1))
+          (out_nets): Sequential(
+            (0): Conv2d(768, 256, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (out_nett): Sequential(
+            (0): Conv2d(256, 256, kernel_size=(3, 1), stride=(2, 1), padding=(1, 0))
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (downs1): Sequential(
+            (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (downs2): Sequential(
+            (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (downt2): Sequential(
+            (0): Conv2d(256, 256, kernel_size=(1, 1), stride=(2, 1))
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (tan): Tanh()
+          (relu): LeakyReLU(negative_slope=0.1)
+          (drop): Dropout(p=0.1, inplace=False)
+        )
+        (5-7): 3 x STAttentionBlock(
+          (pes): PositionalEncoding()
+          (ff_nets): Sequential(
+            (0): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (in_nets): Conv2d(256, 768, kernel_size=(1, 1), stride=(1, 1))
+          (out_nets): Sequential(
+            (0): Conv2d(1536, 256, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (out_nett): Sequential(
+            (0): Conv2d(256, 256, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (tan): Tanh()
+          (relu): LeakyReLU(negative_slope=0.1)
+          (drop): Dropout(p=0.1, inplace=False)
+        )
+      )
+      (left_graph_layers): ModuleList(
+        (0): STAttentionBlock(
+          (pes): PositionalEncoding()
+          (ff_nets): Sequential(
+            (0): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (in_nets): Conv2d(64, 192, kernel_size=(1, 1), stride=(1, 1))
+          (out_nets): Sequential(
+            (0): Conv2d(384, 64, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (out_nett): Sequential(
+            (0): Conv2d(64, 64, kernel_size=(7, 1), stride=(2, 1), padding=(3, 0))
+            (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (downs1): Sequential(
+            (0): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (downs2): Sequential(
+            (0): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (downt2): Sequential(
+            (0): Conv2d(64, 64, kernel_size=(1, 1), stride=(2, 1))
+            (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (tan): Tanh()
+          (relu): LeakyReLU(negative_slope=0.1)
+          (drop): Dropout(p=0.1, inplace=False)
+        )
+        (1): STAttentionBlock(
+          (pes): PositionalEncoding()
+          (ff_nets): Sequential(
+            (0): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (in_nets): Conv2d(64, 192, kernel_size=(1, 1), stride=(1, 1))
+          (out_nets): Sequential(
+            (0): Conv2d(384, 64, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (out_nett): Sequential(
+            (0): Conv2d(64, 64, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+            (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (tan): Tanh()
+          (relu): LeakyReLU(negative_slope=0.1)
+          (drop): Dropout(p=0.1, inplace=False)
+        )
+        (2): STAttentionBlock(
+          (pes): PositionalEncoding()
+          (ff_nets): Sequential(
+            (0): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (in_nets): Conv2d(64, 384, kernel_size=(1, 1), stride=(1, 1))
+          (out_nets): Sequential(
+            (0): Conv2d(384, 128, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (out_nett): Sequential(
+            (0): Conv2d(128, 128, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+            (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (downs1): Sequential(
+            (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (downs2): Sequential(
+            (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (downt2): Sequential(
+            (0): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (tan): Tanh()
+          (relu): LeakyReLU(negative_slope=0.1)
+          (drop): Dropout(p=0.1, inplace=False)
+        )
+        (3): STAttentionBlock(
+          (pes): PositionalEncoding()
+          (ff_nets): Sequential(
+            (0): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (in_nets): Conv2d(128, 384, kernel_size=(1, 1), stride=(1, 1))
+          (out_nets): Sequential(
+            (0): Conv2d(768, 128, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (out_nett): Sequential(
+            (0): Conv2d(128, 128, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+            (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (tan): Tanh()
+          (relu): LeakyReLU(negative_slope=0.1)
+          (drop): Dropout(p=0.1, inplace=False)
+        )
+        (4): STAttentionBlock(
+          (pes): PositionalEncoding()
+          (ff_nets): Sequential(
+            (0): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (in_nets): Conv2d(128, 768, kernel_size=(1, 1), stride=(1, 1))
+          (out_nets): Sequential(
+            (0): Conv2d(768, 256, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (out_nett): Sequential(
+            (0): Conv2d(256, 256, kernel_size=(3, 1), stride=(2, 1), padding=(1, 0))
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (downs1): Sequential(
+            (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (downs2): Sequential(
+            (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (downt2): Sequential(
+            (0): Conv2d(256, 256, kernel_size=(1, 1), stride=(2, 1))
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (tan): Tanh()
+          (relu): LeakyReLU(negative_slope=0.1)
+          (drop): Dropout(p=0.1, inplace=False)
+        )
+        (5-7): 3 x STAttentionBlock(
+          (pes): PositionalEncoding()
+          (ff_nets): Sequential(
+            (0): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (in_nets): Conv2d(256, 768, kernel_size=(1, 1), stride=(1, 1))
+          (out_nets): Sequential(
+            (0): Conv2d(1536, 256, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (out_nett): Sequential(
+            (0): Conv2d(256, 256, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (tan): Tanh()
+          (relu): LeakyReLU(negative_slope=0.1)
+          (drop): Dropout(p=0.1, inplace=False)
+        )
+      )
+      (right_graph_layers): ModuleList(
+        (0): STAttentionBlock(
+          (pes): PositionalEncoding()
+          (ff_nets): Sequential(
+            (0): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (in_nets): Conv2d(64, 192, kernel_size=(1, 1), stride=(1, 1))
+          (out_nets): Sequential(
+            (0): Conv2d(384, 64, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (out_nett): Sequential(
+            (0): Conv2d(64, 64, kernel_size=(7, 1), stride=(2, 1), padding=(3, 0))
+            (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (downs1): Sequential(
+            (0): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (downs2): Sequential(
+            (0): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (downt2): Sequential(
+            (0): Conv2d(64, 64, kernel_size=(1, 1), stride=(2, 1))
+            (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (tan): Tanh()
+          (relu): LeakyReLU(negative_slope=0.1)
+          (drop): Dropout(p=0.1, inplace=False)
+        )
+        (1): STAttentionBlock(
+          (pes): PositionalEncoding()
+          (ff_nets): Sequential(
+            (0): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (in_nets): Conv2d(64, 192, kernel_size=(1, 1), stride=(1, 1))
+          (out_nets): Sequential(
+            (0): Conv2d(384, 64, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (out_nett): Sequential(
+            (0): Conv2d(64, 64, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+            (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (tan): Tanh()
+          (relu): LeakyReLU(negative_slope=0.1)
+          (drop): Dropout(p=0.1, inplace=False)
+        )
+        (2): STAttentionBlock(
+          (pes): PositionalEncoding()
+          (ff_nets): Sequential(
+            (0): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (in_nets): Conv2d(64, 384, kernel_size=(1, 1), stride=(1, 1))
+          (out_nets): Sequential(
+            (0): Conv2d(384, 128, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (out_nett): Sequential(
+            (0): Conv2d(128, 128, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+            (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (downs1): Sequential(
+            (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (downs2): Sequential(
+            (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (downt2): Sequential(
+            (0): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (tan): Tanh()
+          (relu): LeakyReLU(negative_slope=0.1)
+          (drop): Dropout(p=0.1, inplace=False)
+        )
+        (3): STAttentionBlock(
+          (pes): PositionalEncoding()
+          (ff_nets): Sequential(
+            (0): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (in_nets): Conv2d(128, 384, kernel_size=(1, 1), stride=(1, 1))
+          (out_nets): Sequential(
+            (0): Conv2d(768, 128, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (out_nett): Sequential(
+            (0): Conv2d(128, 128, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+            (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (tan): Tanh()
+          (relu): LeakyReLU(negative_slope=0.1)
+          (drop): Dropout(p=0.1, inplace=False)
+        )
+        (4): STAttentionBlock(
+          (pes): PositionalEncoding()
+          (ff_nets): Sequential(
+            (0): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (in_nets): Conv2d(128, 768, kernel_size=(1, 1), stride=(1, 1))
+          (out_nets): Sequential(
+            (0): Conv2d(768, 256, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (out_nett): Sequential(
+            (0): Conv2d(256, 256, kernel_size=(3, 1), stride=(2, 1), padding=(1, 0))
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (downs1): Sequential(
+            (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (downs2): Sequential(
+            (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (downt2): Sequential(
+            (0): Conv2d(256, 256, kernel_size=(1, 1), stride=(2, 1))
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (tan): Tanh()
+          (relu): LeakyReLU(negative_slope=0.1)
+          (drop): Dropout(p=0.1, inplace=False)
+        )
+        (5-7): 3 x STAttentionBlock(
+          (pes): PositionalEncoding()
+          (ff_nets): Sequential(
+            (0): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (in_nets): Conv2d(256, 768, kernel_size=(1, 1), stride=(1, 1))
+          (out_nets): Sequential(
+            (0): Conv2d(1536, 256, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (out_nett): Sequential(
+            (0): Conv2d(256, 256, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (tan): Tanh()
+          (relu): LeakyReLU(negative_slope=0.1)
+          (drop): Dropout(p=0.1, inplace=False)
+        )
+      )
+      (body_graph_layers): ModuleList(
+        (0): STAttentionBlock(
+          (pes): PositionalEncoding()
+          (ff_nets): Sequential(
+            (0): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (in_nets): Conv2d(64, 192, kernel_size=(1, 1), stride=(1, 1))
+          (out_nets): Sequential(
+            (0): Conv2d(384, 64, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (out_nett): Sequential(
+            (0): Conv2d(64, 64, kernel_size=(7, 1), stride=(2, 1), padding=(3, 0))
+            (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (downs1): Sequential(
+            (0): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (downs2): Sequential(
+            (0): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (downt2): Sequential(
+            (0): Conv2d(64, 64, kernel_size=(1, 1), stride=(2, 1))
+            (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (tan): Tanh()
+          (relu): LeakyReLU(negative_slope=0.1)
+          (drop): Dropout(p=0.1, inplace=False)
+        )
+        (1): STAttentionBlock(
+          (pes): PositionalEncoding()
+          (ff_nets): Sequential(
+            (0): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (in_nets): Conv2d(64, 192, kernel_size=(1, 1), stride=(1, 1))
+          (out_nets): Sequential(
+            (0): Conv2d(384, 64, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (out_nett): Sequential(
+            (0): Conv2d(64, 64, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+            (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (tan): Tanh()
+          (relu): LeakyReLU(negative_slope=0.1)
+          (drop): Dropout(p=0.1, inplace=False)
+        )
+        (2): STAttentionBlock(
+          (pes): PositionalEncoding()
+          (ff_nets): Sequential(
+            (0): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (in_nets): Conv2d(64, 384, kernel_size=(1, 1), stride=(1, 1))
+          (out_nets): Sequential(
+            (0): Conv2d(384, 128, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (out_nett): Sequential(
+            (0): Conv2d(128, 128, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+            (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (downs1): Sequential(
+            (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (downs2): Sequential(
+            (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (downt2): Sequential(
+            (0): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (tan): Tanh()
+          (relu): LeakyReLU(negative_slope=0.1)
+          (drop): Dropout(p=0.1, inplace=False)
+        )
+        (3): STAttentionBlock(
+          (pes): PositionalEncoding()
+          (ff_nets): Sequential(
+            (0): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (in_nets): Conv2d(128, 384, kernel_size=(1, 1), stride=(1, 1))
+          (out_nets): Sequential(
+            (0): Conv2d(768, 128, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (out_nett): Sequential(
+            (0): Conv2d(128, 128, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+            (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (tan): Tanh()
+          (relu): LeakyReLU(negative_slope=0.1)
+          (drop): Dropout(p=0.1, inplace=False)
+        )
+        (4): STAttentionBlock(
+          (pes): PositionalEncoding()
+          (ff_nets): Sequential(
+            (0): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (in_nets): Conv2d(128, 768, kernel_size=(1, 1), stride=(1, 1))
+          (out_nets): Sequential(
+            (0): Conv2d(768, 256, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (out_nett): Sequential(
+            (0): Conv2d(256, 256, kernel_size=(3, 1), stride=(2, 1), padding=(1, 0))
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (downs1): Sequential(
+            (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (downs2): Sequential(
+            (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (downt2): Sequential(
+            (0): Conv2d(256, 256, kernel_size=(1, 1), stride=(2, 1))
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (tan): Tanh()
+          (relu): LeakyReLU(negative_slope=0.1)
+          (drop): Dropout(p=0.1, inplace=False)
+        )
+        (5-7): 3 x STAttentionBlock(
+          (pes): PositionalEncoding()
+          (ff_nets): Sequential(
+            (0): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (in_nets): Conv2d(256, 768, kernel_size=(1, 1), stride=(1, 1))
+          (out_nets): Sequential(
+            (0): Conv2d(1536, 256, kernel_size=(1, 1), stride=(1, 1))
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (out_nett): Sequential(
+            (0): Conv2d(256, 256, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0))
+            (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+          )
+          (tan): Tanh()
+          (relu): LeakyReLU(negative_slope=0.1)
+          (drop): Dropout(p=0.1, inplace=False)
+        )
+      )
+      (drop_out): Dropout(p=0.1, inplace=False)
+    )
+    (fuse_visual_head): VisualHead(
+      (fc1): Linear(in_features=1024, out_features=512, bias=True)
+      (bn1): MaskedNorm(
+        (norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+      )
+      (relu1): ReLU()
+      (dropout1): Dropout(p=0.1, inplace=False)
+      (pe): PositionalEncoding()
+      (feedforward): PositionwiseFeedForward(
+        (layer_norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True, bias=True)
+        (pwff_layer): Sequential(
+          (0): Conv1d(512, 2048, kernel_size=(3,), stride=(1,), padding=same)
+          (1): ReLU()
+          (2): Dropout(p=0.1, inplace=False)
+          (3): Conv1d(2048, 512, kernel_size=(3,), stride=(1,), padding=same)
+          (4): Dropout(p=0.1, inplace=False)
+        )
+      )
+      (layer_norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True, bias=True)
+      (plus_conv): Identity()
+      (gloss_output_layer): Linear(in_features=512, out_features=2004, bias=True)
+    )
+    (body_visual_head): VisualHead(
+      (fc1): Linear(in_features=256, out_features=512, bias=True)
+      (bn1): MaskedNorm(
+        (norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+      )
+      (relu1): ReLU()
+      (dropout1): Dropout(p=0.1, inplace=False)
+      (pe): PositionalEncoding()
+      (feedforward): PositionwiseFeedForward(
+        (layer_norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True, bias=True)
+        (pwff_layer): Sequential(
+          (0): Conv1d(512, 2048, kernel_size=(3,), stride=(1,), padding=same)
+          (1): ReLU()
+          (2): Dropout(p=0.1, inplace=False)
+          (3): Conv1d(2048, 512, kernel_size=(3,), stride=(1,), padding=same)
+          (4): Dropout(p=0.1, inplace=False)
+        )
+      )
+      (layer_norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True, bias=True)
+      (plus_conv): Identity()
+      (gloss_output_layer): Linear(in_features=512, out_features=2004, bias=True)
+    )
+    (left_visual_head): VisualHead(
+      (fc1): Linear(in_features=512, out_features=512, bias=True)
+      (bn1): MaskedNorm(
+        (norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+      )
+      (relu1): ReLU()
+      (dropout1): Dropout(p=0.1, inplace=False)
+      (pe): PositionalEncoding()
+      (feedforward): PositionwiseFeedForward(
+        (layer_norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True, bias=True)
+        (pwff_layer): Sequential(
+          (0): Conv1d(512, 2048, kernel_size=(3,), stride=(1,), padding=same)
+          (1): ReLU()
+          (2): Dropout(p=0.1, inplace=False)
+          (3): Conv1d(2048, 512, kernel_size=(3,), stride=(1,), padding=same)
+          (4): Dropout(p=0.1, inplace=False)
+        )
+      )
+      (layer_norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True, bias=True)
+      (plus_conv): Identity()
+      (gloss_output_layer): Linear(in_features=512, out_features=2004, bias=True)
+    )
+    (right_visual_head): VisualHead(
+      (fc1): Linear(in_features=512, out_features=512, bias=True)
+      (bn1): MaskedNorm(
+        (norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)
+      )
+      (relu1): ReLU()
+      (dropout1): Dropout(p=0.1, inplace=False)
+      (pe): PositionalEncoding()
+      (feedforward): PositionwiseFeedForward(
+        (layer_norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True, bias=True)
+        (pwff_layer): Sequential(
+          (0): Conv1d(512, 2048, kernel_size=(3,), stride=(1,), padding=same)
+          (1): ReLU()
+          (2): Dropout(p=0.1, inplace=False)
+          (3): Conv1d(2048, 512, kernel_size=(3,), stride=(1,), padding=same)
+          (4): Dropout(p=0.1, inplace=False)
+        )
+      )
+      (layer_norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True, bias=True)
+      (plus_conv): Identity()
+      (gloss_output_layer): Linear(in_features=512, out_features=2004, bias=True)
+    )
+    (recognition_loss_func): CTCLoss()
+  )
+)
+number of params: 46.026592M
+Test:  [  0/147]  eta: 0:13:44  loss: 133.1879 (133.1879)  time: 5.6118  data: 0.6783  max mem: 894
+Test:  [ 10/147]  eta: 0:08:34  loss: 160.6711 (172.7415)  time: 3.7573  data: 0.0618  max mem: 1001
+Test:  [ 20/147]  eta: 0:06:48  loss: 132.2394 (153.1236)  time: 3.1000  data: 0.0002  max mem: 1001
+Test:  [ 30/147]  eta: 0:05:36  loss: 114.6754 (147.5171)  time: 2.3967  data: 0.0002  max mem: 1001
+Test:  [ 40/147]  eta: 0:04:59  loss: 109.5742 (138.9237)  time: 2.3507  data: 0.0002  max mem: 1001
+Test:  [ 50/147]  eta: 0:04:21  loss: 109.2428 (136.4832)  time: 2.4171  data: 0.0002  max mem: 1001
+Test:  [ 60/147]  eta: 0:03:59  loss: 141.9827 (141.4879)  time: 2.6475  data: 0.0002  max mem: 1001
+Test:  [ 70/147]  eta: 0:03:29  loss: 151.3493 (142.7639)  time: 2.7790  data: 0.0002  max mem: 1001
+Test:  [ 80/147]  eta: 0:03:00  loss: 126.7909 (141.6325)  time: 2.5264  data: 0.0002  max mem: 1001
+Test:  [ 90/147]  eta: 0:02:33  loss: 124.5986 (140.6943)  time: 2.5930  data: 0.0002  max mem: 1001
+Test:  [100/147]  eta: 0:02:05  loss: 136.3677 (141.4496)  time: 2.5807  data: 0.0002  max mem: 1001
+Test:  [110/147]  eta: 0:01:37  loss: 147.7818 (140.8579)  time: 2.4099  data: 0.0002  max mem: 1001
+Test:  [120/147]  eta: 0:01:11  loss: 104.2664 (137.2019)  time: 2.4314  data: 0.0002  max mem: 1086
+Test:  [130/147]  eta: 0:00:44  loss: 88.3111 (133.2700)  time: 2.6130  data: 0.0002  max mem: 1086
+Test:  [140/147]  eta: 0:00:18  loss: 98.2108 (133.2187)  time: 2.7274  data: 0.0002  max mem: 1086
+Test:  [146/147]  eta: 0:00:02  loss: 112.6483 (133.6419)  time: 2.9313  data: 0.0002  max mem: 1086
+Test: Total time: 0:06:33 (2.6759 s / it)
+* Averaged stats: loss: 112.6483 (133.6419)  wer: 43.9458 (43.9458)
+* DEV loss 133.642
+Test loss of the network on the 147 test videos: 133.642

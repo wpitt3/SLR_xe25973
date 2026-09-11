@@ -1,3 +1,9 @@
+# Based on MSKA train.py https://github.com/sutwangyan/MSKA/
+# Modifications by Will Pitt
+#  - Added loading existing encoder weight
+#  - Added lowering weights for encoder
+#  - Added allowing running test predictions only and dumping of the results to a file
+
 import torch
 import torch.backends.cudnn as cudnn
 from torch.utils.data import DataLoader
@@ -18,6 +24,8 @@ import math
 import sys
 from typing import Iterable
 from loguru import logger
+import csv as _csv
+from recognition import DSTA
 
 # *metric
 from metrics import wer_list, bleu, rouge
@@ -49,6 +57,8 @@ def get_args_parser():
     parser.add_argument('--start_epoch', default=0, type=int, metavar='N',
                         help='start epoch')
     parser.add_argument('--eval', action='store_true', help='Perform evaluation only')
+    parser.add_argument('--eval_test_only', action='store_true', help='Skip dev eval and only run test eval')
+    parser.add_argument('--dump_preds', default=None, help='CSV path for predictions dump')
     parser.add_argument('--num_workers', default=4, type=int)
     parser.add_argument('--pin-mem', action='store_true',
                         help='Pin CPU memory in DataLoader for more efficient (sometimes) transfer to GPU.')
@@ -56,6 +66,8 @@ def get_args_parser():
                         help='')
     parser.set_defaults(pin_mem=True)
     parser.add_argument('--config', type=str, default='configs/csl-daily_s2g.yaml')
+    parser.add_argument('--ft-recipe', choices=['normal', 'low-enc-lr'], default='normal')
+    parser.add_argument('--enc-lr', type=float, default=1.0e-4)
 
     # * wandb params
     parser.add_argument("--log_all", action="store_true",
@@ -125,13 +137,48 @@ def main(args, config):
 
     if args.finetune:
         checkpoint = torch.load(args.finetune, map_location='cpu')
-        ret = model.load_state_dict(checkpoint['model'], strict=False)
+        # Load the encoder weights into DSTA
+        sd = checkpoint['model']
+        model_keys = set(model.state_dict().keys())
+        if any(k in model_keys for k in sd):
+            ret = model.load_state_dict(sd, strict=False)
+        else:
+            dsta_name = next((n for n, m in model.named_modules()
+                              if isinstance(m, DSTA)), None)
+            prefix = dsta_name + '.' if dsta_name else ''
+            sd = {prefix + k: v for k, v in sd.items()}
+            ret = model.load_state_dict(sd, strict=False)
+            loaded = len(sd) - len(ret.unexpected_keys)
+            assert loaded > 0
+            print(f"Loaded {loaded} encoder tensors into {dsta_name}")
+
         print('Missing keys: \n', '\n'.join(ret.missing_keys))
         print('Unexpected keys: \n', '\n'.join(ret.unexpected_keys))
 
     n_parameters = utils.count_parameters_in_MB(model)
     print(f'number of params: {n_parameters}M')
-    optimizer = build_optimizer(config=config['training']['optimization'], model=model)
+
+    opt_cfg = config['training']['optimization']
+    # Setup low lr on encoder
+    if args.ft_recipe == 'low-enc-lr':
+        base_lr = opt_cfg['learning_rate']['default']
+        enc_mod = model.recognition_network.visual_backbone_keypoint
+        enc_ids = {id(p) for p in enc_mod.parameters()}
+        enc_params = [p for p in model.parameters() if id(p) in enc_ids and p.requires_grad]
+        other = [p for p in model.parameters() if id(p) not in enc_ids and p.requires_grad]
+        assert enc_params and other, (len(enc_params), len(other))
+        enc_target_lr = args.enc_lr if args.ft_recipe == 'low-enc-lr' else base_lr
+        optimizer = torch.optim.Adam(
+            [{'params': enc_params, 'lr': enc_target_lr},
+             {'params': other, 'lr': base_lr}],
+            lr=base_lr,
+            betas=tuple(opt_cfg.get('betas', (0.9, 0.999))),
+            eps=opt_cfg.get('eps', 1.0e-8),
+            weight_decay=opt_cfg.get('weight_decay', 0),
+            amsgrad=opt_cfg.get('amsgrad', False))
+    else:
+        optimizer = build_optimizer(config=opt_cfg, model=model)
+
     scheduler, scheduler_type = build_scheduler(config=config['training']['optimization'], optimizer=optimizer)
     output_dir = Path(config['training']['model_dir'])
     if args.resume:
@@ -145,10 +192,12 @@ def main(args, config):
     if args.eval:
         if not args.resume:
             logger.warning('Please specify the trained model: --resume /path/to/best_checkpoint.pth')
-        dev_stats = evaluate(args, config, dev_dataloader, model, tokenizer, epoch=0, beam_size=5,
-                              generate_cfg=config['training']['validation']['translation'],
-                              do_translation=config['do_translation'], do_recognition=config['do_recognition'])
-        print(f"Dev loss of the network on the {len(dev_dataloader)} test videos: {dev_stats['loss']:.3f}")
+        # ignore eval to speed up pred runs
+        if not args.eval_test_only:
+            dev_stats = evaluate(args, config, dev_dataloader, model, tokenizer, epoch=0, beam_size=5,
+                                 generate_cfg=config['training']['validation']['translation'],
+                                 do_translation=config['do_translation'], do_recognition=config['do_recognition'])
+            print(f"Dev loss of the network on the {len(dev_dataloader)} test videos: {dev_stats['loss']:.3f}")
 
         test_stats = evaluate(args, config, test_dataloader, model, tokenizer, epoch=0, beam_size=5,
                               generate_cfg=config['testing']['translation'],
@@ -321,6 +370,15 @@ def evaluate(args, config, dev_dataloader, model, tokenizer, epoch, beam_size=1,
                 evaluation_results[k + 'wer_list'] = wer_results
                 evaluation_results['wer'] = min(wer_results['wer'], evaluation_results['wer'])
             metric_logger.update(wer=evaluation_results['wer'])
+
+            # dump test predictions to csv
+            if args.dump_preds:
+                hyp_keys = sorted(h for h in results[name] if 'gls_hyp' in h)
+                with open(args.dump_preds, 'w', newline='') as file:
+                    writer = _csv.writer(file)
+                    writer.writerow(['name', 'ref'] + hyp_keys)
+                    for n in results:
+                        writer.writerow([n, results[n].get('gls_ref', '')] + [results[n].get(h, '') for h in hyp_keys])
 
         if do_translation:
             txt_ref = [results[n]['txt_ref'] for n in results]

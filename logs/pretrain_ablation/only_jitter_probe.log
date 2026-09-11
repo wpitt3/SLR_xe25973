@@ -1,0 +1,53 @@
+/opt/pytorch/lib/python3.13/site-packages/torch/cuda/__init__.py:63: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1787187334.687464    5693 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/opt/pytorch/lib/python3.13/site-packages/torch/nn/modules/loss.py:44: UserWarning: size_average and reduce args will be deprecated, please use reduction='mean' instead.
+  self.reduction: str = _Reduction.legacy_get_string(size_average, reduce)
+seed:0
+enc:pretrain_out/only_jitter/enc_0.20.pth: loaded 1144 | missing 0 unexpected 0
+cache:18400 samples -> probe_cache/enc_0_20_pth_seed0/train
+cache:1077 samples -> probe_cache/enc_0_20_pth_seed0/dev
+ep 1/40 ctc 50.605 DEV WER 98.61 (best 98.61) 64s
+ep 2/40 ctc 49.467 DEV WER 99.54 (best 98.61) 128s
+ep 3/40 ctc 50.204 DEV WER 99.93 (best 98.61) 191s
+ep 4/40 ctc 49.256 DEV WER 99.96 (best 98.61) 255s
+ep 5/40 ctc 50.161 DEV WER 99.80 (best 98.61) 319s
+ep 6/40 ctc 49.421 DEV WER 98.98 (best 98.61) 383s
+ep 7/40 ctc 49.874 DEV WER 98.03 (best 98.03) 447s
+ep 8/40 ctc 49.588 DEV WER 99.78 (best 98.03) 511s
+ep 9/40 ctc 49.246 DEV WER 99.95 (best 98.03) 574s
+ep 10/40 ctc 50.612 DEV WER 97.52 (best 97.52) 639s
+ep 11/40 ctc 50.170 DEV WER 99.56 (best 97.52) 703s
+ep 12/40 ctc 48.473 DEV WER 99.44 (best 97.52) 766s
+ep 13/40 ctc 48.598 DEV WER 99.58 (best 97.52) 830s
+ep 14/40 ctc 48.676 DEV WER 97.91 (best 97.52) 895s
+ep 15/40 ctc 49.356 DEV WER 99.77 (best 97.52) 958s
+ep 16/40 ctc 48.438 DEV WER 98.63 (best 97.52) 1023s
+ep 17/40 ctc 48.833 DEV WER 99.39 (best 97.52) 1087s
+ep 18/40 ctc 48.157 DEV WER 99.66 (best 97.52) 1150s
+ep 19/40 ctc 47.860 DEV WER 97.69 (best 97.52) 1215s
+ep 20/40 ctc 48.520 DEV WER 99.87 (best 97.52) 1279s
+ep 21/40 ctc 48.519 DEV WER 99.51 (best 97.52) 1343s
+ep 22/40 ctc 47.947 DEV WER 99.24 (best 97.52) 1407s
+ep 23/40 ctc 48.415 DEV WER 97.80 (best 97.52) 1471s
+ep 24/40 ctc 48.547 DEV WER 99.62 (best 97.52) 1535s
+ep 25/40 ctc 48.137 DEV WER 98.92 (best 97.52) 1599s
+ep 26/40 ctc 48.033 DEV WER 99.58 (best 97.52) 1663s
+ep 27/40 ctc 48.078 DEV WER 99.67 (best 97.52) 1726s
+ep 28/40 ctc 48.397 DEV WER 99.47 (best 97.52) 1789s
+ep 29/40 ctc 48.921 DEV WER 99.91 (best 97.52) 1853s
+ep 30/40 ctc 48.566 DEV WER 98.69 (best 97.52) 1917s
+ep 31/40 ctc 47.844 DEV WER 99.95 (best 97.52) 1981s
+ep 32/40 ctc 48.025 DEV WER 99.76 (best 97.52) 2045s
+ep 33/40 ctc 47.737 DEV WER 99.84 (best 97.52) 2108s
+ep 34/40 ctc 47.832 DEV WER 99.95 (best 97.52) 2172s
+ep 35/40 ctc 48.397 DEV WER 99.79 (best 97.52) 2236s
+ep 36/40 ctc 48.275 DEV WER 99.85 (best 97.52) 2300s
+ep 37/40 ctc 48.002 DEV WER 99.96 (best 97.52) 2364s
+ep 38/40 ctc 47.978 DEV WER 99.44 (best 97.52) 2427s
+ep 39/40 ctc 47.621 DEV WER 99.89 (best 97.52) 2492s
+ep 40/40 ctc 47.453 DEV WER 97.57 (best 97.52) 2556s
+
+PROBE pretrain_out/only_jitter/enc_0.20.pth seed0: best dev WER 97.52
