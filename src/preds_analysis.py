@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import pandas as pd
 from metrics import wer_single
 from scipy.stats import ttest_rel
